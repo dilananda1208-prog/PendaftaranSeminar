@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Pendaftaran Seminar</string>
+    <string name="judul_form">Pendaftaran Seminar</string>
+
+    <!-- Label input -->
+    <string name="label_nama">Nama lengkap</string>
+    <string name="label_email">Email</string>
+    <string name="label_wa">No. WhatsApp</string>
+    <string name="label_kategori">Kategori peserta</string>
+    <string name="label_sesi">Sesi yang diikuti</string>
+    <string name="label_setuju">Saya menyetujui syarat &amp; ketentuan</string>
+
+    <!-- Tombol -->
+    <string name="btn_daftar">Daftar Sekarang</string>
+    <string name="btn_bayar">Pilih Metode Pembayaran</string>
+    <string name="btn_reset">Reset Form</string>
+    <string name="btn_bagikan">Bagikan</string>
+    <string name="btn_kembali">Kembali ke Form</string>
+
+    <!-- Pesan kesalahan -->
+    <string name="err_nama">Nama tidak boleh kosong</string>
+    <string name="err_email">Format email tidak valid</string>
+    <string name="err_wa">Nomor WhatsApp minimal 10 digit</string>
+    <string name="err_sesi">Pilih minimal satu sesi</string>
+    <string name="err_setuju">Centang persetujuan terlebih dahulu</string>
+
+    <string-array name="jumlah_peserta_array">
+        <item>1 orang</item>
+        <item>2 orang</item>
+        <item>3 orang</item>
+        <item>4 orang</item>
+        <item>5 orang</item>
+    </string-array>
+</resources>

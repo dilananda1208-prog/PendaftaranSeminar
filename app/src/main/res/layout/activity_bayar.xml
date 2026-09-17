@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Metode Pembayaran"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Pilih satu metode, lalu tekan Konfirmasi"
+        android:textColor="#6c757d" />
+
+    <RadioGroup
+        android:id="@+id/rgBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton android:id="@+id/rbTransfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Transfer Bank" />
+
+        <RadioButton android:id="@+id/rbVa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Virtual Account" />
+
+        <RadioButton android:id="@+id/rbQris"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QRIS" />
+
+        <RadioButton android:id="@+id/rbEwallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-Wallet" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnKonfirmasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Konfirmasi Pilihan" />
+
+    <Button
+        android:id="@+id/btnBatalBayar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Batal" />
+</LinearLayout>

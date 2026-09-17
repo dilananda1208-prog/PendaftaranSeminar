@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fakultas_array">
+        <item>Fakultas Teknik</item>
+        <item>Fakultas Ilmu Komputer</item>
+        <item>Fakultas Ekonomi</item>
+        <item>Fakultas Keguruan</item>
+    </string-array>
+
+    <string-array name="bayar_array">
+        <item>Transfer Bank</item>
+        <item>Virtual Account</item>
+        <item>QRIS</item>
+        <item>E-Wallet</item>
+    </string-array>
+</resources>

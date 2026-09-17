@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Judul -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/judul_form"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1a1a2e" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Isi data berikut untuk mengikuti seminar"
+            android:textColor="#6c757d"
+            android:textSize="13sp" />
+
+        <!-- Input Nama -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_nama"
+                android:inputType="textPersonName"
+                android:maxLength="40" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Input Judul Makalah (DITAMBAHKAN) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Judul Makalah"
+                android:inputType="textCapSentences" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Input Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Input WhatsApp -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilWa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_wa"
+                android:inputType="number"
+                android:maxLength="14" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- RadioGroup: pilih satu kategori -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_kategori"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMahasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Mahasiswa" />
+
+            <RadioButton
+                android:id="@+id/rbDosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dosen" />
+
+            <RadioButton
+                android:id="@+id/rbUmum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Umum" />
+        </RadioGroup>
+
+        <!-- CheckBox: boleh pilih lebih dari satu -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_sesi"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbAi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI &amp; Machine Learning" />
+
+        <CheckBox
+            android:id="@+id/cbIot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Internet of Things" />
+
+        <CheckBox
+            android:id="@+id/cbCloud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cloud Computing" />
+
+        <!-- Spinner: pilih satu dari daftar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Fakultas"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spFakultas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <!-- Switch persetujuan -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swSetuju"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/label_setuju" />
+
+        <!-- Menampilkan metode pembayaran terpilih -->
+        <TextView
+            android:id="@+id/tvMetode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Metode pembayaran: -"
+            android:textColor="#d63384"
+            android:textStyle="bold" />
+
+        <!-- Tombol aksi -->
+        <Button
+            android:id="@+id/btnDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            android:text="@string/btn_daftar" />
+
+        <Button
+            android:id="@+id/btnBayar"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_bayar" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_reset" />
+
+        <!-- Spinner Jumlah Peserta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Jumlah Peserta"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spJumlah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+    </LinearLayout>
+</ScrollView>
